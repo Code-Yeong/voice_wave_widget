@@ -88,8 +88,9 @@ class _VoiceWavePageState extends State<TestVoiceWaveWidget> {
               child: Text('Finish'),
             ),
             Container(
-              height: 300,
-              width: 900,
+              width: 263,
+              height: 60,
+              // color: Colors.red,
               child: VoiceWaveWidget(type: type),
             ),
           ],

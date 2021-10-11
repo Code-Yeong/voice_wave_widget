@@ -84,7 +84,7 @@ class WaveLine {
     for (var x = 0; x <= width; x += 1) {
       var xx = (24 * x) / width - 12;
       var yy = fooA1(xx, a, c) * fooC1(xx, a) * fooD1(xx, a, c) * fooC(xx);
-      var y = yy * height / 20;
+      var y = yy * height / 10;
       if (x == 0) {
         path.moveTo(x + 0.0, y + height / 2);
       } else {
@@ -95,7 +95,7 @@ class WaveLine {
     for (var x = width; x > 0; x -= 1) {
       var xx = (24 * x) / width - 12;
       var yy = -fooA1(xx, a, c) * fooC1(xx, a) * fooD1(xx, a, c) * fooC(xx);
-      var y = yy * height / 20;
+      var y = yy * height / 10;
       path.lineTo(x, y + height / 2);
     }
     path.close();
@@ -113,7 +113,7 @@ class WaveLine {
     for (var x = 0; x <= width; x += 1) {
       var xx = (24 * x) / width - 12;
       var yy = fooA2(xx, a, c) * fooC2(xx, a) * fooD2(xx, a, c) * fooE(xx);
-      var y = yy * height / 20;
+      var y = yy * height / 10;
       if (x == 0) {
         path.moveTo(x + 0.0, y + height / 2);
       } else {
@@ -124,7 +124,7 @@ class WaveLine {
     for (var x = width; x > 0; x -= 1) {
       var xx = (24 * x) / width - 12;
       var yy = -fooA2(xx, a, c) * fooC2(xx, a) * fooD2(xx, a, c) * fooE(xx);
-      var y = yy * height / 20;
+      var y = yy * height / 10;
       path.lineTo(x + 0.0, y + height / 2);
     }
     path.close();

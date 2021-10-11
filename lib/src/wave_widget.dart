@@ -5,6 +5,7 @@
  * Description:
  */
 
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'wave_voice_painter.dart';
@@ -75,9 +76,8 @@ class _VoiceWaveWidgetState extends State<VoiceWaveWidget> with SingleTickerProv
   Widget build(BuildContext context) {
     return new LayoutBuilder(builder: (context, BoxConstraints size) {
       return new Container(
-        // color: Colors.red,
-        width: size.maxWidth * 0.9, //MediaQuery.of(context).size.width * (widget.isPad ? 0.6 : 0.75),
-        height: size.maxHeight, //flexible(context, 70.0), //widget.isPad ? 120.0 : 70.0,
+        width: size.maxWidth * 0.9,
+        height: size.maxHeight,
         child: new CustomPaint(
           painter: new VoiceWavePainter(
             volume: _curVolume,
