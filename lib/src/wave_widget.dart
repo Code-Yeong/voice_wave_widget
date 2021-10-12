@@ -35,6 +35,7 @@ class _VoiceWaveWidgetState extends State<VoiceWaveWidget> with SingleTickerProv
   void initState() {
     super.initState();
     controller = new AnimationController(vsync: this, duration: new Duration(seconds: 1000))..addListener(_listener);
+    _updateStatus();
   }
 
   void _listener() {
@@ -69,6 +70,8 @@ class _VoiceWaveWidgetState extends State<VoiceWaveWidget> with SingleTickerProv
     super.didUpdateWidget(oldWidget);
     if (mounted) {
       _updateStatus();
+      controller.removeListener(_listener);
+      controller.addListener(_listener);
     }
   }
 
